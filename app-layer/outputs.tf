@@ -10,6 +10,6 @@ output "db_app_name" {
 
 output "ip_width" {
   description = "IP width chosen"
-  value       = lookup(var.ip_width, 32)
+  value       = fly_ip.exampleIp.type
 }
 
