@@ -48,3 +48,8 @@ output "db_deployed" {
   description = "Whether MySQL database is deployed"
   value       = data.terraform_remote_state.app_layer.outputs.db_deployed
 }
+
+output "lap_ext_ports" {
+  description = "External ports of Linux Apache PHP"
+  value       = fly_machine.web.services[*].ports[*].port
+}
